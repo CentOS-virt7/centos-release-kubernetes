@@ -1,9 +1,9 @@
-%global KubernetesVersion 19
+%global KubernetesVersion 110
 
 Summary: Kubernetes from the CentOS Virt SIG
 Name: centos-release-kubernetes%{KubernetesVersion}
 Version: 1.0
-Release: 2%{?dist}
+Release: 1%{?dist}
 License: GPL
 URL: https://wiki.centos.org/SpecialInterestGroup/Virtualization
 
@@ -25,6 +25,9 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
+* Thu Mar 29 2018 Spyros Trigazis <spyridon.trigazis@cern.ch>
+- Update to 1.10.
+
 * Mon Mar 26 2018 Spyros Trigazis <spyridon.trigazis@cern.ch>
 - Fix mirror and buildlogs path.
 
